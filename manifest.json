@@ -2,7 +2,7 @@
   "name": "sw-sample",
   "short_name": "sw-sample",
   "start_url": "/",
-  "display": "sw-sample",
+  "display": "standalone",
   "background_color": "#fff",
   "description": "sw-sample"
 }
