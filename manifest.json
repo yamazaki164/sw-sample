@@ -1,0 +1,8 @@
+{
+  "name": "sw-sample",
+  "short_name": "sw-sample",
+  "start_url": "/",
+  "display": "sw-sample",
+  "background_color": "#fff",
+  "description": "sw-sample"
+}
