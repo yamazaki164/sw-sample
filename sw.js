@@ -14,9 +14,17 @@ self.addEventListener('fetch', (event) => {
   console.log(location.origin);
   console.log(url.pathname);
 
-  if (url.origin == location.origin && url.pathname == '/sw-sample/dog.png') {
-    event.respondWith(caches.match('/sw-sample/cat.png'));
-  }
+  event.respondWith(
+    caches.match(event.request).then(function (response) {
+      if (response) {
+        return response;
+      }
+      return fetch(event.request);
+    })
+  );
+  // if (url.origin == location.origin && url.pathname == '/sw-sample/dog.png') {
+  //   event.respondWith(caches.match('/sw-sample/cat.png'));
+  // }
 });
 
 self.addEventListener('activate', (event) => {
