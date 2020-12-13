@@ -25,10 +25,8 @@ self.addEventListener('fetch', (event) => {
   // if (url.origin == location.origin && url.pathname == '/sw-sample/dog.png') {
   //   event.respondWith(caches.match('/sw-sample/cat.png'));
   // }
-  alert('Fetched resource ' + event.request.url);
 });
 
 self.addEventListener('activate', (event) => {
   console.log('[Service Worker] Activate');
-  alert('Activate');
 });
