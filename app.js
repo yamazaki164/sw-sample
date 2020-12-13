@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
   setTimeout(() => {
     const img = new Image();
 
-    img.src = '/dog.svg';
+    img.src = '/sw-sample/dog.png';
     document.body.appendChild(img);
   }, 3000);
 }

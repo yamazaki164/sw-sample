@@ -1,5 +1,4 @@
 self.addEventListener('install', (event) => {
-  document.querySelector('#state').innerHTML('[Service Worker] Install');
   console.log('[Service Worker] Install');
 
   event.waitUntil(
@@ -8,9 +7,6 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  document
-    .querySelector('#state')
-    .innerHTML('[Service Worker] Fetched resource ' + event.request.url);
   console.log('[Service Worker] Fetched resource ' + event.request.url);
 
   if (url.origin == location.origin && url.pathname == '/sw-sample/dog.png') {
@@ -19,6 +15,5 @@ self.addEventListener('fetch', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  document.querySelector('#state').innerHTML('[Service Worker] Activate');
   console.log('[Service Worker] Activate');
 });
