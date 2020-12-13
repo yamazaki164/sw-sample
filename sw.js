@@ -7,6 +7,8 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  const url = event.request.url;
+
   console.log('[Service Worker] Fetched resource ' + event.request.url);
   console.log(url.origin);
   console.log(location.origin);
