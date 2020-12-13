@@ -8,7 +8,8 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('fetch', (event) => {
   console.log('[Service Worker] Fetched resource ' + event.request.url);
-  console.log(url.origin, location.origin);
+  console.log(url.origin);
+  console.log(location.origin);
   console.log(url.pathname);
 
   if (url.origin == location.origin && url.pathname == '/sw-sample/dog.png') {
