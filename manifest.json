@@ -3,12 +3,13 @@
   "name": "sw-sample",
   "lang": "ja",
   "description": "sw-sample",
-  "start_url": "/sw-sample/index.html",
+  "start_url": "https://yamazaki164.github.io/sw-sample/index.html",
   "background_color": "#00aae7",
   "theme_color": "#00aae7",
   "dir": "ltr",
   "display": "standalone",
   "orientation": "any",
+  "scope": "https://yamazaki164.github.io/sw-sample/",
   "icons": [
     {
       "src": "/sw-sample/android-icon-192x192-dunplab-manifest-20613.png",
