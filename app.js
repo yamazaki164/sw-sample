@@ -23,6 +23,6 @@ document.addEventListener('resume', function (event) {
   alert('resume');
 });
 
-document.addEventListener('visibilitychange ', function (event) {
+document.addEventListener('visibilitychange', function (event) {
   alert('visibilitychange');
 });
