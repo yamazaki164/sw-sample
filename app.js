@@ -13,16 +13,16 @@ if ('serviceWorker' in navigator) {
     img.src = '/sw-sample/dog.png';
     document.body.appendChild(img);
   }, 2000);
-
-  document.addEventListener('active', function (event) {
-    alert('active');
-  });
-
-  document.addEventListener('resume', function (event) {
-    alert('resume');
-  });
-
-  document.addEventListener('visibilitychange ', function (event) {
-    alert('visibilitychange');
-  });
 }
+
+document.addEventListener('active', function (event) {
+  alert('active');
+});
+
+document.addEventListener('resume', function (event) {
+  alert('resume');
+});
+
+document.addEventListener('visibilitychange ', function (event) {
+  alert('visibilitychange');
+});
