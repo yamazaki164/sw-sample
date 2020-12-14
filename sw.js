@@ -1,6 +1,5 @@
 self.addEventListener('install', (event) => {
   console.log('[Service Worker] Install');
-  self.document.writeln('[Service Worker] Install');
 
   event.waitUntil(
     caches.open('static-v1').then((cache) => cache.add('/sw-sample/cat.png'))
