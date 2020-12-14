@@ -1,5 +1,6 @@
 self.addEventListener('install', (event) => {
   console.log('[Service Worker] Install');
+  document.writeln('[Service Worker] Install');
 
   event.waitUntil(
     caches.open('static-v1').then((cache) => cache.add('/sw-sample/cat.png'))
@@ -7,6 +8,8 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  document.writeln('[Service Worker] Fetch');
+
   const url = event.request.url;
 
   console.log('[Service Worker] Fetched resource ' + event.request.url);
@@ -29,4 +32,5 @@ self.addEventListener('fetch', (event) => {
 
 self.addEventListener('activate', (event) => {
   console.log('[Service Worker] Activate');
+  document.writeln('[Service Worker] Activate');
 });

@@ -17,14 +17,17 @@ if ('serviceWorker' in navigator) {
 
 document.addEventListener('active', function (event) {
   alert('active');
+  document.writeln('active');
 });
 
 document.addEventListener('resume', function (event) {
   alert('resume');
+  document.writeln('resume');
 });
 
 document.addEventListener('visibilitychange', function (event) {
   if (!event.target.hidden) {
     alert('visibilitychange');
+    document.writeln('visibilitychange');
   }
 });
