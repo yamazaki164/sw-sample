@@ -17,17 +17,23 @@ if ('serviceWorker' in navigator) {
 
 document.addEventListener('active', function (event) {
   alert('active');
-  document.writeln('active');
+  const div = document.createElement('div');
+  div.innerText('active');
+  document.appendChild(div);
 });
 
 document.addEventListener('resume', function (event) {
   alert('resume');
-  document.writeln('resume');
+  const div = document.createElement('div');
+  div.innerText('resume');
+  document.appendChild(div);
 });
 
 document.addEventListener('visibilitychange', function (event) {
   if (!event.target.hidden) {
     alert('visibilitychange');
-    document.writeln('visibilitychange');
+    const div = document.createElement('div');
+    div.innerText('visibilitychange');
+    document.appendChild(div);
   }
 });
