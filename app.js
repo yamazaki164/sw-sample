@@ -24,5 +24,8 @@ document.addEventListener('resume', function (event) {
 });
 
 document.addEventListener('visibilitychange', function (event) {
-  alert('visibilitychange');
+  console.log(event.target.document.hidden);
+  if (!event.target.document.hidden) {
+    alert('visibilitychange');
+  }
 });
