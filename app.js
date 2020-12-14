@@ -3,7 +3,7 @@ if ('serviceWorker' in navigator) {
     .register('./sw.js')
     .then((reg) => {
       console.log('sw registerd');
-      alert('sw registerd');
+      // alert('sw registerd');
     })
     .catch((err) => console.log('error ', err));
 
